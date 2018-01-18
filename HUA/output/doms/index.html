@@ -1,0 +1,716 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <title>HRIS Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link href="themes/beyondT/css/logincss/bootstrap.min.css" rel="stylesheet" />
+            <link href="themes/beyondT/css/logincss/bootstrap-responsive.min.css" rel="stylesheet" />
+            <link href="themes/beyondT/css/logincss/preview.min.css" rel="stylesheet" />
+            <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css" />
+                <link href="themes/beyondT/css/logincss/font-awesome.min.css" rel="stylesheet" />
+                <link href="themes/beyondT/css/logincss/style.css" rel="stylesheet" />
+                <link rel="stylesheet" href="themes/beyondT/css/jquery.simplyscroll.css" type="text/css" media="all" />
+
+                <!--[if IE 7]>
+                <link href = "css/font-awesome-ie7.min.css" rel = "stylesheet" />
+                <![endif] -->
+                <!--[if IE 8]>
+                <style type = "text/css">
+                .navbar-inner{
+                filter:none;
+                }
+                </style>
+                <![endif] -->
+
+                <script src="scripts/js/loginJs/jquery-1.9.1.min.js"></script>
+                </head>
+                <body class=" ">
+                    <div class="container">
+                        <div class="row-fluid" id="demo-2">
+                            <div class="span10 offset1">
+                                <div class="span12 text-center margin-10">
+                                    <a href="login.php"> <img src="themes/beyondT/images/HRIS_logo.png" /> </a>
+                                </div>
+                                <div class="tabbable custom-tabs tabs-left tabs-animated  flat flat-all hide-label-980 shadow track-url auto-scroll">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active pausePlayer"><a href="#panel1" data-toggle="tab" class="active "><i class="icon-lock"></i> 
+                                                <span>Login Panel</span></a></li>
+                                        <li class="pausePlayer"><a href="#panel2" data-toggle="tab"><i class="icon-user"></i> 
+                                                <span>About HRIS</span></a></li>
+                                        <li class="pausePlayer"><a href="#panel3" data-toggle="tab"><i class="icon-star"></i> 
+                                                <span>Celebration</span></a></li>
+                                                                                <li class="pausePlayer"><a href="#panel5" data-toggle="tab"><i class="icon-info-sign"></i> 
+                                                <span>HR Policy</span></a></li>
+                                                                                    <li class="pausePlayer">
+                                                <a href="#panel7" data-toggle="tab">
+                                                    <i class="icon-food" aria-hidden="true"></i> 
+                                                    <span>Food Menu</span>
+                                                </a>
+                                            </li>
+                                                                                    <li class="pausePlayer"><a href="#panel6" data-toggle="tab"><i class="icon-question-sign"></i> 
+                                                <span>Did you know?</span></a></li>
+                                    </ul>
+                                    <div class="tab-content ">
+                                        <div class="tab-pane active  login-container" id="panel1">
+                                            <div class="row-fluid">
+                                                <div class="span5">
+                                                    <div id="login">
+                                                        <h4 class="tab-heading"><i class="icon-user"></i> 
+                                                             
+                                                            Login Here</h4>
+                                                        <form name="loginForm" method="post" action="./login.php" onsubmit="return validateForm();">      
+                                                            <div class="loginTxt txtHideDiv alert alert-error">
+                                                                <div class="">
+                                                                                                                                    </div>
+                                                            </div>
+                                                            <label>Username</label>
+                                                            <input type="text" autofocus="" name="txtUserName" id="txtUserName" value="" class="input-block-level" />
+                                                            <label>Password</label>
+                                                            <input type="password" name="txtPassword" id="txtPassword" value="" class="input-block-level" />
+                                                            <div class="loginTxtBtn extraText">
+                                                                <div class="span12">
+                                                                    <input type="submit" value="Sign In" class="btn pull-left" name="Submit" />
+                                                                        <label class="checkbox pull-right pad15">
+                                                                            <a href="http://115.113.54.29/N9DLRfanX+PP6yPq5SqjXds5NYONBgzS6wV2zbDb8+I=NQGcQZpridnn8H8ErfRa65ReEJ+svJdDc0Y=/?action=sendtoken" target="_blank">Forgot Password</a>
+                                                                        </label>
+                                                                        <label class="checkbox pull-right pad15">
+                                                                            <input type="checkbox" name="txtSsi" id="txtSsi" value="1" class="splCls" /> Remember me
+                                                                        </label>
+                                                                </div>
+
+
+                                                            </div> 
+                                                            <br />
+
+                                                            <input type="hidden" name="actionID" />
+                                                        </form>
+                                                    </div>
+
+                                                    <div class="event-description"> <!-- Managing Event -->
+                                                        <h1>Thursday : 18th January 2018</h1>
+                                                                                                                    <div class="daily-message">                           
+                                                                <!--<p>-->
+                                                                                                                                    <div id="" class="marqueeCls">
+                                                                        <h5>Thought of the day: </h5>
+                                                                        <div class="divColor">"Imagination rules the world"</div>
+                                                                    </div>
+                                                                                                                                <!--</p>-->
+
+                                                            </div>
+                                                                                                            </div>
+                                                </div>
+                                                <div class="span3 emp_details">
+                                                    <h4 class="tab-heading"><i class="icon-star"></i>  Celebrations</h4>
+                                                    <div id="empscroll" class="celebrations-container clearfix emp-login-scroll">
+                                                        <!-- Birthday -->
+                                                                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=193&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Happy Birthday Satendra  Singh</div>
+                                                                </div>
+                                                                
+                                                        <!-- JOB Anniversarry -->
+                                                                                                                        <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=396&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9"><b>Rajini Anantha Padmanaban</b> completes 8 years with QAIT today</div>
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=02381&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9"><b>Rohan  Sharma</b> completes 2 years with QAIT today</div>
+                                                                </div>
+                                                                                                                                                                            </div>
+                                                </div>
+                                                <div class="span4">
+                                                    <h4 class="tab-heading"><i class="icon-bell-alt"></i>  Notification</h4>
+                                                    <div class="vert simply-scroll-container"><div class="simply-scroll-clip"><div id="scrollerNotice" class="simply-scroll-list" style="height: 306px;">
+                                                                                                                                                                            <!--<div class='noticeHead' align="left"><b>Current Openings</b></div>-->
+                                                                <p class="lbltxt"> For all the current openings in QA InfoTech, please view Current Openings in HRIS. HRIS -&gt; Current Openings</p>  
+                                                    <p class="lbltxt"> For all the current openings in QA InfoTech, please view Current Openings in HRIS. HRIS -&gt; Current Openings</p></div></div></div>
+
+                                                    <div class="box emp_speak">
+                                                        <p><b>Employee Speak</b></p>
+                                                        <div class="vert simply-scroll-container"><div class="simply-scroll-clip"><div class="simply-scroll-list" style="height: 2838px;"><div id="scrollerSpeak" class="simply-scroll-list" style="height: 1404px;">
+                                                                                                                                                                                <!--<div class='noticeHead' align="left"><b>Employee Speak</b></div>-->
+                                                                    <p class="lbltxt"> Good company to work for. I express my gratitude to Mukesh for hiring me and giving me a change to excel.</p>                                                                                                                    <!--<div class='noticeHead' align="left"><b>Employee Speak</b></div>-->
+                                                                    <p class="lbltxt"> 28 July 2010, I can never forget this date. The day when I entered in a different phase of life i.e. Professional World. So, I'll be completing 5 years in this organization which gives me a sense of belonging to QA Info Tech. I never thought that this journey would be so exciting and challenging. Each and every day was a different learning experience here. Senior Management, colleagues, everyone is so helpful and nice. I feel like I am totally a different person now. I entered this organization, as a young nervous boy and I am a Young Confident Man today. I've got a lot of exposure here that had helped me to enhance my knowledge and intellect. The best part of the organization is that there are enormous opportunities and management will always help you to grab them and work on  them. They will always be there to provide their continuous support and will always show interest in helping you to learn and do the task in a better way. As it is said that," All time Work and No Play... Makes Jack a dull Boy". So, our Organization takes care of this aspect also. Fun events are there on regular basis that keeps us fresh and refreshes our mind. It's always like a second home to me. There were lots of ups and downs but we stood as a team and faced it and we have always seen it growing better and better and so was our personal front. So far, it has been a wonderful and awesome time here and still my journey is on... Lots of new learning, lot of new exposures, lot of new projects are yet to come. Each day I enter my office to do something new or if not new than do the regular job in a new way which keeps my mind innovative. And more stories are yet to come. As i said, "THE JOURNEY IS STILL ON"...</p>  
+                                                        </div><div id="scrollerSpeak" class="simply-scroll-list" style="height: 1404px;">
+                                                                                                                                                                                <!--<div class='noticeHead' align="left"><b>Employee Speak</b></div>-->
+                                                                    <p class="lbltxt"> Good company to work for. I express my gratitude to Mukesh for hiring me and giving me a change to excel.</p>                                                                                                                    <!--<div class='noticeHead' align="left"><b>Employee Speak</b></div>-->
+                                                                    <p class="lbltxt"> 28 July 2010, I can never forget this date. The day when I entered in a different phase of life i.e. Professional World. So, I'll be completing 5 years in this organization which gives me a sense of belonging to QA Info Tech. I never thought that this journey would be so exciting and challenging. Each and every day was a different learning experience here. Senior Management, colleagues, everyone is so helpful and nice. I feel like I am totally a different person now. I entered this organization, as a young nervous boy and I am a Young Confident Man today. I've got a lot of exposure here that had helped me to enhance my knowledge and intellect. The best part of the organization is that there are enormous opportunities and management will always help you to grab them and work on  them. They will always be there to provide their continuous support and will always show interest in helping you to learn and do the task in a better way. As it is said that," All time Work and No Play... Makes Jack a dull Boy". So, our Organization takes care of this aspect also. Fun events are there on regular basis that keeps us fresh and refreshes our mind. It's always like a second home to me. There were lots of ups and downs but we stood as a team and faced it and we have always seen it growing better and better and so was our personal front. So far, it has been a wonderful and awesome time here and still my journey is on... Lots of new learning, lot of new exposures, lot of new projects are yet to come. Each day I enter my office to do something new or if not new than do the regular job in a new way which keeps my mind innovative. And more stories are yet to come. As i said, "THE JOURNEY IS STILL ON"...</p>  
+                                                        </div></div></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="row-fluid"> <!-- Event Calendar is commented as of now -->
+                                                <!--<div class="span12">
+                                                    <div class="eventcontainer">
+                                                        <div class="monthdetails"> 
+                                                            <div class="span2"><i class="icon-angle-left"></i></div>
+                                                            <div class="span8 text-center monthname"> january 2016 </div>
+                                                            <div class="span2 text-right"><i class="icon-angle-right"></i></div>
+                                    
+                                    
+                                                        </div>
+                                                        <div class="event-details">
+                                                            <div class="span4">
+                                                                <div class="time-details span3">15:30</div>
+                                                                <div class="event-text span8"> My Event </div>
+                                    
+                                                            </div>
+                                                            <div class="span4">
+                                                                <div class="time-details span3">15:30</div>
+                                                                <div class="event-text span8"> My Event </div>
+                                    
+                                                            </div>
+                                                            <div class="span4">
+                                                                <div class="time-details span3">15:30</div>
+                                                                <div class="event-text span8"> My Event </div>
+                                    
+                                                            </div>
+                                    
+                                                        </div>
+                                                    </div>
+                                                </div>-->
+                                            </div>
+                                        </div> <!-- End of TAB LOGIN -->
+                                        <div class="tab-pane hrisuse-container" id="panel2"> <!-- Start of about HRIS tab -->
+                                            <div class="row-fluid">
+                                                <div class="span6">
+                                                    <h4 class="tab-heading"><i class="icon-user"></i>   Use HRIS to ...</h4>
+                                                    <div class="box li-spacing">
+                                                        <p><b> Use HRIS to ... </b></p>
+                                                        <ul>
+                                                            <li>Keep track of Holidays and Leaves</li>
+                                                            <li>Keep track of the hours you spend in office</li>
+                                                            <li>Keep us updated of all your details</li>
+                                                            <li>Manage your subordinates</li>
+                                                            <li>Track your career growth at QAIT</li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="span6">
+                                                    <h4 class="tab-heading"><i class="icon-question"></i>  HRIS Updates</h4>
+                                                    <div class="box li-spacing">
+                                                        <p><b> HRIS Updates</b></p>
+                                                        <ul>
+                                                                                                                                <li><a href="archives.php#tabs-2" style="text-decoration: none;">HRIS Release-v2.7.5631-January 12, 2018</a><img src="themes/beyondT/pictures/New_icons_44.gif" /></li>
+                                                                                                                                        <li>HRIS Release-v2.7.5577-December 22, 2017</li>
+                                                                                                                                        <li>HRIS Release-v2.7.5554-December 15, 2017</li>
+                                                                                                                                        <li>HRIS Release-v2.7.5526-December 08, 2017</li>
+                                                                                                                                        <li>HRIS Release-v2.7.5510-December 01, 2017</li>
+                                                                                                                            </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- ABOUT HRIS -->
+
+                                        <div class="tab-pane Celebration-container" id="panel3">
+                                            <div class="row-fluid">
+                                                <div class="span4">
+                                                    <h4 class="tab-heading"><i class="icon-star"></i>  Birthday(s)</h4>
+                                                    <div class="celebrations-container clearfix">
+                                                                                                                        <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=193&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Satendra  Singh</div>
+                                                                </div>
+                                                                                                                    </div>
+                                                </div>
+                                                <div class="span4">
+                                                    <h4 class="tab-heading"><i class="icon-shield"></i>  JobAnniversary(s)</h4>
+                                                    <div class="celebrations-container clearfix">
+                                                        <!-- JOB Anniversarry -->
+                                                                                                                        <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=396&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9"><b>Rajini Anantha Padmanaban</b> completes 8 years with QAIT today</div>
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=02381&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9"><b>Rohan  Sharma</b> completes 2 years with QAIT today</div>
+                                                                </div>
+                                                                                                                    </div>
+                                                </div>
+                                                <div class="span4">
+                                                    <h4 class="tab-heading"><i class="icon-star"></i>  New joinee(s)</h4>
+                                                    <div class="celebrations-container clearfix">
+                                                                                                                        <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=3340&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Sanchit  Saxena</div>									
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=3341&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Kartar  Singh</div>									
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=3342&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Somesh  Kumar</div>									
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=3343&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Komal  Jasrotia</div>									
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=3344&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Pradeep  Kumar</div>									
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=3345&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Priyanka  Bhargava</div>									
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=3346&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Anupam  Kumaria</div>									
+                                                                </div>
+                                                                                                                                <div class="emp-cel span12">
+                                                                    <div class="emp-img span3"><img src="templates/hrfunct/photohandler.php?id=3347&amp;action=VIEW&amp;subAction=VIEWONLY" /></div>
+                                                                    <div class="emp-msg span9">Shamiulla  Koguru</div>									
+                                                                </div>
+                                                                                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div> <!-- END of CELEBRATION-->
+                                        <div id="panel4" class="tab-pane qaitupdates-container ">
+                                            <div class="row-fluid">
+                                                <div class="span12"> 
+                                                    <div align="center" style="">
+                    
+</div>
+                                                </div>
+                                            </div>
+                                        </div><!-- QAIT UPDATE -->
+                                        <div id="panel5" class="tab-pane hris-policy">
+                                            <div class="row-fluid">
+                                                <div class="span12">
+                                                    <h4 class="tab-heading"><i class="icon-info-sign"></i>  HR Policy</h4>                                  
+                                                </div>
+                                            </div>
+                                            <div class="row-fluid" id="policy-container"> <!-- HR Document -->
+                                                                                                        <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-primary">Work Time Policy 2018</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Work Time Policy 2018</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2018-01-18</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-success">Employee Benefits &amp; Reimbursements Policy 2018</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Employee Benefits &amp; Reimbursements Policy 2018</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2018-01-17</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-info">List of Holidays (India Operations) for the year 2018</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">List of Holidays (India Operations) for the year 2018</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2017-11-30</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-warning">Leave Policy 2017</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Leave Policy 2017</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2017-09-20</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-danger">Service Transition Document Template</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Service Transition Document Template</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2017-09-06</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-success">Ascent Employee Self Service Portal- User Manual</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Ascent Employee Self Service Portal-
+ User Manual</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2017-09-01</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-info">Business Visa Reimbursement/ Per Diem Policy- effective September 01, 2017</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Business Visa Reimbursement/ Per Diem Policy- effective September 01, 2017</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2017-08-11</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-warning">Team Data (May 2017- July 2017)</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Team Data (May 2017- July 2017)</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2017-07-24</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-danger">Group Medical Insurance Policy- 2017</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Group Medical Insurance Policy Document- 2017</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2017-07-13</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-success">B1/Business Visa Reimbursement/ Per Diem Policy- 2017</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">B1/Business Visa Reimbursement/ Per Diem Policy- 2017</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2017-07-10</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-info">Performance Improvement Plan</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Performance Improvement Plan</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2016-12-07</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-warning">List of Holidays- 2017</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">List of Holidays, Restricted Holidays and tentative schedule for Working Saturdays for the year 2017 (applicable for India Employees only)</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2016-11-28</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-danger">IT Policy</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">IT Policy</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2016-11-16</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-success">IT Service Catalogue</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">IT Service Catalogue</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2016-11-16</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-info">IT Induction</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">IT Induction Presentation</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2016-11-16</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-warning">Sexual Harassment Policy</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Sexual Harassment Policy</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2016-07-22</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-danger">Resource Management System Manual Document</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Resource Management System Document</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2015-12-08</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-success">Grievance Redressal Policy 2015</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">Defining the Grievance Handling Procedure: w.e.f November 13, 2015</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2015-11-13</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-info">Earthquake Safety Tips</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">The document outlines the safety measures to be taken in case of an earthquake.</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2013-12-26</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-warning">Fire Safety Tips</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">The document outlines the safety measures to be taken in case of a fire alarm.</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2013-12-26</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-danger">How to operate fire extinguisher</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">The document outlines the process to operate a fire extinguisher.</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2013-12-26</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-success">Non_Discrimination_Policy</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">This policy aims to create a healthy working environment that enables employees to work without any discrimination.</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2013-08-02</div>
+                                                            </div>
+                                                        </div>
+                                                                                                                <div class="row-fluid marginTop15">
+                                                            <div class="span4">
+                                                                <div class="bg-info">Disciplinary_Action_Policy</div>
+                                                            </div>
+                                                            <div class="span8" id="leave-policy"> 
+                                                                <div class="span9 policy-details">This policy provides information about Disciplinary Action Policy of QA InfoTech.</div>
+                                                                <div class="span3 policy-date text-right">Updated on 2013-08-02</div>
+                                                            </div>
+                                                        </div>
+                                                            
+                                            </div>
+
+                                        </div> <!-- HR Policy -->
+                                                                                <div id="panel7" class="tab-pane Reminder-container">
+                                            <div class="row-fluid">
+                                                <div class="span12">
+                                                    <h4 class="tab-heading"><i class="icon-food" aria-hidden="true"></i>   Food Menu</h4>
+                                                    <table id="invoiceTable" class="table table-striped childTR">
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>DATE</th>
+                                                                <th>BREAKFAST</th> 
+                                                                <th>LUNCH</th> 
+                                                                <th>SNACKS</th> 
+                                                                <th>DINNER</th>
+                                                                <th>SPECIAL FOOD</th> 
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                                                                                                    <tr><td width="75px">18-01-2018</td>
+                                                                                                                                                <td>Tea, Mix parantha</td>
+                                                                                                                                                                                                                                <td>Jeera rice, Kadhi pakora, Tawa Roti, Salad, Aloo jeera</td>
+                                                                                                                                                                                                                                <td>Tea, Paneer kulcha</td>
+                                                                                                                                                                                                                                <td>N/A</td>
+                                                                                                                                                                                                                                <td>N/A</td>
+                                                                                                                                                                                                                        </tr>
+                                                                                                                                            <tr><td width="75px">19-01-2018</td>
+                                                                                                                                                <td>Bedmi puri with sabji, Tea</td>
+                                                                                                                                                                                                                                <td>Jeera rice, Mix veg, Rajma, Tawa Roti, Raita, Salad</td>
+                                                                                                                                                                                                                                <td>Tea, Vada pav</td>
+                                                                                                                                                                                                                                <td>N/A</td>
+                                                                                                                                                                                                                                <td>N/A</td>
+                                                                                                                                                                                                                        </tr>
+                                                                                                                                
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div><!-- Food Menu -->
+                                                                                <div id="panel6" class="tab-pane Reminder-container">
+                                            <div class="row-fluid">
+                                                <div class="span12">
+                                                    <h4 class="tab-heading"><i class="icon-question-sign"></i>   Did you know?</h4>
+                                                    <!--     <div class="span11 text-center"> 
+                                                             <img src="themes/beyondT/images/bg.jpg" alt="did you know">
+                                                         </div>   -->
+                                                    <header id="myCarousel" class="carousel slide">
+                                                        <!-- Indicators -->
+                                                        <ol class="carousel-indicators">
+                                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                                        </ol>
+
+                                                        <!-- Wrapper for Slides -->
+                                                        <div class="carousel-inner">
+                                                            <div class="item active">
+                                                                <!-- Set the first background image using inline CSS below. -->
+                                                                <div class="fill" style="background-image:url('themes/beyondT/images/bg.jpg');"></div>
+                                                                <div class="carousel-caption">
+                                                                    <h5>Caption 1</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <!-- Set the second background image using inline CSS below. -->
+                                                                <div class="fill" style="background-image:url('themes/beyondT/images/bg.jpg');"></div>
+                                                                <div class="carousel-caption">
+                                                                    <h5>Caption 2</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <!-- Set the third background image using inline CSS below. -->
+                                                                <div class="fill" style="background-image:url('themes/beyondT/images/bg.jpg');"></div>
+                                                                <div class="carousel-caption">
+                                                                    <h5>Caption 3</h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Controls -->
+                                                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                                            <i class="icon-angle-left"></i>
+                                                        </a>
+                                                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                                            <i class="icon-angle-right"></i>
+                                                        </a>
+
+                                                    </header>
+                                                    <div class="span11">
+                                                                                                                                                                                    <p> <b>HR Updates</b> </p>
+                                                                <p>Job Openings for Java Developer, Dotnet Developers, Automation Engineer, BDE, Inside Sales, SOC Executive, SMEs. For more information, please visit : HRIS &gt; Current Openings.</p>
+                                                                                                                                <p> <b>Admin Updates:</b> </p>
+                                                                <p>New photos of QA InfoTech A-8 Office uploaded in HRIS. To view images, please visit: Home &gt; Photo Album.</p>
+                                                                                                                                <p> <b>Emergency Contact Numbers</b> </p>
+                                                                <p>Important Contact Numbers of Cops in Noida. For more information, please visit: Home &gt; HR Documents.</p>
+                                                                                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div><!-- Do you know tab -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>		
+                    </div>
+                    <div class="clearfix"></div>
+                    <footer>
+                        <div class="container">
+                            <div class="span10 offset1 text-center">
+                                <ul class="bs-docs-footer-links">  <li><a href="http://10.0.1.94/myascentpayroll/" target="_blank">Access Payroll Online</a></li>   <li><a href="http://bugzilla.qainfotech.com:8080/bugzilla/" target="_blank">Report a Bug</a></li> </ul>
+
+                            </div>
+                            <div class="span10 offset1 text-center">
+                                <p class="copyright"> QAITHRIS Copyright QA InfoTech Pvt. Ltd. 2018 rights reserved.</p>
+                            </div>
+                        </div></footer>
+
+                    <script src="scripts/js/loginJs/bootstrap.min.js"></script>
+                    <script src="scripts/js/loginJs/tabs-addon.js"></script>
+                    <script type="text/javascript" src="scripts/js/jquery.simplyscroll.min.js"></script>
+                    <script>
+                                                                $('.carousel').carousel({
+                                                                    interval: 5000 //changes the speed
+                                                                })
+                    </script>
+
+                    <script>
+                        $(function ()
+                        {
+
+                        });
+
+                    </script>
+                    <script>
+                        function validateForm() {
+                            var txtUserObj = jQuery('#txtUserName');
+                            var txtPassObj = jQuery('#txtPassword');
+                            if (txtUserObj.val() == '') {
+                                txtUserObj.css('border', '1px solid red');
+                                txtUserObj.css('box-shadow', 'inset 0 1px 1px red,0 0 4px red');
+                                return false;
+                            }
+
+                            if (txtPassObj.val() == '') {
+                                txtUserObj.css('border', '1px solid #8DC506');
+                                txtPassObj.css('border', '1px solid red');
+                                return false;
+                            }
+
+                            document.loginForm.actionID.value = "chkAuthentication";
+                            document.loginForm.submit();
+                        }
+                        window.onload = function () {
+                            winResize();
+                        };
+                        window.onresize = function () {
+                            winResize();
+                        };
+                        function winResize() {
+                            if ($('body .container').height() &lt; $(window).height()) {
+                                $('.container.footerPos').css('position', 'fixed');
+                            } else {
+                                $('.container.footerPos').css('position', 'static');
+                            }
+                            setTimeout(function () {
+                                winResize();
+                            }, 10);
+                        }
+                        $(document).ready(function () {
+                            jQuery("#scroller,#scrollerSpeak,#scrollerNotice").simplyScroll({
+                                direction: 'forwards',
+                                pauseOnHover: true,
+                                frameRate: 20,
+                                orientation: 'vertical',
+                                speed: 1,
+                                autoMode: 'loop',
+                                customClass: 'vert'
+
+                            });
+                            $(".pausePlayer").click(function () {
+                                setTimeout(function () {
+                                    $("#txtUserName").focus();
+                                }, 10);
+                            });
+                        });
+                        if (window.parent != window) {
+                            //window.parent.location = "localhost:8086/user/logoff";
+                            window.top.location.href = "";
+                            window.top.location.href = "";
+                        }
+
+                        if ($('.emp-login-scroll').height() &gt; 320) {
+                            jQuery("#empscroll").simplyScroll({
+                                direction: 'forwards',
+                                pauseOnHover: true,
+                                frameRate: 20,
+                                orientation: 'vertical',
+                                speed: 1,
+                                autoMode: 'loop',
+                                customClass: 'vert'
+
+                            });
+                        }
+
+                    </script>
+                    <script>
+                        function nextMsg(i) {
+                            $('#hrismsg').html(messages[i]).fadeIn(500).delay(5000).fadeOut(500, function () {
+                                nextMsg(++i % messages.length);
+                            });
+                        }
+                        ;
+                        var messages = [];
+                                //messages.push("For all the current openings in QA InfoTech, please view Current Openings in HRIS. HRIS -&gt; Current Openings");                                 
+                                $('#message').hide();
+                        //nextMsg(0);
+                    </script>
+
+                
+                </body></html>

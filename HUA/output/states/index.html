@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Crawl overview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="CrawlJax">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/bootstrap-responsive.min.css" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<link href="../css/shCore.css" rel="stylesheet" type="text/css" />
+<link href="../css/shCoreDefault.css" rel="stylesheet" type="text/css" />
+<style>
+.tooltip-inner {
+	max-width: 300px;
+	word-wrap: break-word;
+}
+
+body {
+	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+							<a class="brand" href="../index.html#graph">Crawl overview</a>
+						<ul class="nav">
+									<li class="active" ><a href="#">State inspector</a></li>
+							</ul>
+			<div class="nav pull-right">
+				<a href="#" class="btn graphBtn" id='pauseButton' data-toggle="tooltip" data-placement="bottom" title="Pause the graph movement"><i class="icon-pause"></i></a>
+				<a href="#" class="btn graphBtn" rel="popover" data-placement="bottom"  data-original-title="What to do"><i class='icon-question-sign'></i></a>
+				<div style="display: none" id='popup-content'>
+					<p>You can double click a state to inspect it further.</p>
+					<p>Clicking an edge gives more details on the state transition.</p>
+					<p>Use your mouse to zoom in and out by scrolling, or drag the states and view around.</p>
+				</div>
+				<a href="result.json" class="btn" data-toggle="tooltip" data-placement="bottom" title="Download result as JSON"><i class='icon-download'></i></a>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+</nav>	<div class='container' >
+		<h1>Summary of index</h1>
+		<table class="table table-bordered table-striped">
+			<colgroup>
+				<col class="span1">
+				<col class="span7">
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>URL</th>
+					<td><a href='http://hris.qainfotech.com/'>http://hris.qainfotech.com/</a></td>
+				</tr>
+				<tr>
+					<th>Fan in</th>
+					<td>0</td>
+				</tr>
+				<tr>
+					<th>Fan out</th>
+					<td>1</td>
+				</tr>
+				<tr>
+					<th>Interaction elements</th>
+					<td>1</td>
+				</tr>
+				<tr>
+					<th>Failed events</th>
+					<td>-</td>
+			</tbody>
+		</table>
+		<ul id='tabs' class="nav nav-tabs">
+			<li class="active">
+				<a href="#screenshot">Screenshot</a>
+			</li>
+			<li>
+				<a href="#dom">Captured DOM</a>
+			</li>	
+			<li>
+				<a href="#interactions">Interactions</a>
+			</li>			
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" style="position: relative;" id='screenshot'>			
+				<img style='max-width: none;' border='0' src='../screenshots/index.jpg' /> 
+								<div rel="tooltip" data-original-title="/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/DIV[2]/DIV[1]/INPUT[1]" class='hovers'
+				style="position: absolute; z-index: 20; left: 275px; top: 278px; width: 72px; height: 32px; border: 2px solid green;  cursor: pointer;" onclick="location.href='state1.html'"></div>
+							</div>
+			<div class="tab-pane" id='dom'>
+				<h2>Captured DOM</h2>
+				<pre class='brush: html'>&lt;!DOCTYPE html&gt;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;head&gt;
+        &lt;title&gt;HRIS Login&lt;/title&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+            &lt;link href=&quot;themes/beyondT/css/logincss/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+            &lt;link href=&quot;themes/beyondT/css/logincss/bootstrap-responsive.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+            &lt;link href=&quot;themes/beyondT/css/logincss/preview.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+            &lt;link href=&quot;http://fonts.googleapis.com/css?family=PT+Sans:400,700&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+                &lt;link href=&quot;themes/beyondT/css/logincss/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+                &lt;link href=&quot;themes/beyondT/css/logincss/style.css&quot; rel=&quot;stylesheet&quot; /&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;themes/beyondT/css/jquery.simplyscroll.css&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&gt;
+
+                &lt;!--[if IE 7]&gt;
+                &lt;link href = &quot;css/font-awesome-ie7.min.css&quot; rel = &quot;stylesheet&quot; /&gt;
+                &lt;![endif] --&gt;
+                &lt;!--[if IE 8]&gt;
+                &lt;style type = &quot;text/css&quot;&gt;
+                .navbar-inner{
+                filter:none;
+                }
+                &lt;/style&gt;
+                &lt;![endif] --&gt;
+
+                &lt;script src=&quot;scripts/js/loginJs/jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body class=&quot; &quot;&gt;
+                    &lt;div class=&quot;container&quot;&gt;
+                        &lt;div class=&quot;row-fluid&quot; id=&quot;demo-2&quot;&gt;
+                            &lt;div class=&quot;span10 offset1&quot;&gt;
+                                &lt;div class=&quot;span12 text-center margin-10&quot;&gt;
+                                    &lt;a href=&quot;login.php&quot;&gt; &lt;img src=&quot;themes/beyondT/images/HRIS_logo.png&quot; /&gt; &lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;tabbable custom-tabs tabs-left tabs-animated  flat flat-all hide-label-980 shadow track-url auto-scroll&quot;&gt;
+                                    &lt;ul class=&quot;nav nav-tabs&quot;&gt;
+                                        &lt;li class=&quot;active pausePlayer&quot;&gt;&lt;a href=&quot;#panel1&quot; data-toggle=&quot;tab&quot; class=&quot;active &quot;&gt;&lt;i class=&quot;icon-lock&quot;&gt;&lt;/i&gt;&nbsp;
+                                                &lt;span&gt;Login Panel&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li class=&quot;pausePlayer&quot;&gt;&lt;a href=&quot;#panel2&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;icon-user&quot;&gt;&lt;/i&gt;&nbsp;
+                                                &lt;span&gt;About HRIS&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                        &lt;li class=&quot;pausePlayer&quot;&gt;&lt;a href=&quot;#panel3&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;&nbsp;
+                                                &lt;span&gt;Celebration&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                                                                &lt;li class=&quot;pausePlayer&quot;&gt;&lt;a href=&quot;#panel5&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;icon-info-sign&quot;&gt;&lt;/i&gt;&nbsp;
+                                                &lt;span&gt;HR Policy&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                                                                    &lt;li class=&quot;pausePlayer&quot;&gt;
+                                                &lt;a href=&quot;#panel7&quot; data-toggle=&quot;tab&quot;&gt;
+                                                    &lt;i class=&quot;icon-food&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&nbsp;
+                                                    &lt;span&gt;Food Menu&lt;/span&gt;
+                                                &lt;/a&gt;
+                                            &lt;/li&gt;
+                                                                                    &lt;li class=&quot;pausePlayer&quot;&gt;&lt;a href=&quot;#panel6&quot; data-toggle=&quot;tab&quot;&gt;&lt;i class=&quot;icon-question-sign&quot;&gt;&lt;/i&gt;&nbsp;
+                                                &lt;span&gt;Did you know?&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                    &lt;div class=&quot;tab-content &quot;&gt;
+                                        &lt;div class=&quot;tab-pane active  login-container&quot; id=&quot;panel1&quot;&gt;
+                                            &lt;div class=&quot;row-fluid&quot;&gt;
+                                                &lt;div class=&quot;span5&quot;&gt;
+                                                    &lt;div id=&quot;login&quot;&gt;
+                                                        &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-user&quot;&gt;&lt;/i&gt;&nbsp;
+                                                            &nbsp;
+                                                            Login Here&lt;/h4&gt;
+                                                        &lt;form name=&quot;loginForm&quot; method=&quot;post&quot; action=&quot;./login.php&quot; onsubmit=&quot;return validateForm();&quot;&gt;      
+                                                            &lt;div class=&quot;loginTxt txtHideDiv alert alert-error&quot;&gt;
+                                                                &lt;div class=&quot;&quot;&gt;
+                                                                                                                                    &lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;label&gt;Username&lt;/label&gt;
+                                                            &lt;input type=&quot;text&quot; autofocus=&quot;&quot; name=&quot;txtUserName&quot; id=&quot;txtUserName&quot; value=&quot;&quot; class=&quot;input-block-level&quot; /&gt;
+                                                            &lt;label&gt;Password&lt;/label&gt;
+                                                            &lt;input type=&quot;password&quot; name=&quot;txtPassword&quot; id=&quot;txtPassword&quot; value=&quot;&quot; class=&quot;input-block-level&quot; /&gt;
+                                                            &lt;div class=&quot;loginTxtBtn extraText&quot;&gt;
+                                                                &lt;div class=&quot;span12&quot;&gt;
+                                                                    &lt;input type=&quot;submit&quot; value=&quot;Sign In&quot; class=&quot;btn pull-left&quot; name=&quot;Submit&quot; /&gt;
+                                                                        &lt;label class=&quot;checkbox pull-right pad15&quot;&gt;
+                                                                            &lt;a href=&quot;http://115.113.54.29/N9DLRfanX+PP6yPq5SqjXds5NYONBgzS6wV2zbDb8+I=NQGcQZpridnn8H8ErfRa65ReEJ+svJdDc0Y=/?action=sendtoken&quot; target=&quot;_blank&quot;&gt;Forgot Password&lt;/a&gt;
+                                                                        &lt;/label&gt;
+                                                                        &lt;label class=&quot;checkbox pull-right pad15&quot;&gt;
+                                                                            &lt;input type=&quot;checkbox&quot; name=&quot;txtSsi&quot; id=&quot;txtSsi&quot; value=&quot;1&quot; class=&quot;splCls&quot; /&gt; Remember me
+                                                                        &lt;/label&gt;
+                                                                &lt;/div&gt;
+
+
+                                                            &lt;/div&gt; 
+                                                            &lt;br /&gt;
+
+                                                            &lt;input type=&quot;hidden&quot; name=&quot;actionID&quot; /&gt;
+                                                        &lt;/form&gt;
+                                                    &lt;/div&gt;
+
+                                                    &lt;div class=&quot;event-description&quot;&gt; &lt;!-- Managing Event --&gt;
+                                                        &lt;h1&gt;Thursday : 18th January 2018&lt;/h1&gt;
+                                                                                                                    &lt;div class=&quot;daily-message&quot;&gt;                           
+                                                                &lt;!--&lt;p&gt;--&gt;
+                                                                                                                                    &lt;div id=&quot;&quot; class=&quot;marqueeCls&quot;&gt;
+                                                                        &lt;h5&gt;Thought of the day: &lt;/h5&gt;
+                                                                        &lt;div class=&quot;divColor&quot;&gt;&quot;Imagination rules the world&quot;&lt;/div&gt;
+                                                                    &lt;/div&gt;
+                                                                                                                                &lt;!--&lt;/p&gt;--&gt;
+
+                                                            &lt;/div&gt;
+                                                                                                            &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;span3 emp_details&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;&nbsp;&nbsp;Celebrations&lt;/h4&gt;
+                                                    &lt;div id=&quot;empscroll&quot; class=&quot;celebrations-container clearfix emp-login-scroll&quot;&gt;
+                                                        &lt;!-- Birthday --&gt;
+                                                                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=193&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Happy Birthday Satendra  Singh&lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                                
+                                                        &lt;!-- JOB Anniversarry --&gt;
+                                                                                                                        &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=396&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;&lt;b&gt;Rajini Anantha Padmanaban&lt;/b&gt; completes 8 years with QAIT today&lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=02381&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;&lt;b&gt;Rohan  Sharma&lt;/b&gt; completes 2 years with QAIT today&lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                                                                                                                                            &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;span4&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-bell-alt&quot;&gt;&lt;/i&gt;&nbsp;&nbsp;Notification&lt;/h4&gt;
+                                                    &lt;div class=&quot;vert simply-scroll-container&quot;&gt;&lt;div class=&quot;simply-scroll-clip&quot;&gt;&lt;div id=&quot;scrollerNotice&quot; class=&quot;simply-scroll-list&quot; style=&quot;height: 306px;&quot;&gt;
+                                                                                                                                                                            &lt;!--&lt;div class='noticeHead' align=&quot;left&quot;&gt;&lt;b&gt;Current Openings&lt;/b&gt;&lt;/div&gt;--&gt;
+                                                                &lt;p class=&quot;lbltxt&quot;&gt; For all the current openings in QA InfoTech, please view Current Openings in HRIS. HRIS -&amp;gt; Current Openings&lt;/p&gt;  
+                                                    &lt;p class=&quot;lbltxt&quot;&gt; For all the current openings in QA InfoTech, please view Current Openings in HRIS. HRIS -&amp;gt; Current Openings&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+                                                    &lt;div class=&quot;box emp_speak&quot;&gt;
+                                                        &lt;p&gt;&lt;b&gt;Employee Speak&lt;/b&gt;&lt;/p&gt;
+                                                        &lt;div class=&quot;vert simply-scroll-container&quot;&gt;&lt;div class=&quot;simply-scroll-clip&quot;&gt;&lt;div class=&quot;simply-scroll-list&quot; style=&quot;height: 2838px;&quot;&gt;&lt;div id=&quot;scrollerSpeak&quot; class=&quot;simply-scroll-list&quot; style=&quot;height: 1404px;&quot;&gt;
+                                                                                                                                                                                &lt;!--&lt;div class='noticeHead' align=&quot;left&quot;&gt;&lt;b&gt;Employee Speak&lt;/b&gt;&lt;/div&gt;--&gt;
+                                                                    &lt;p class=&quot;lbltxt&quot;&gt; Good company to work for. I express my gratitude to Mukesh for hiring me and giving me a change to excel.&lt;/p&gt;                                                                                                                    &lt;!--&lt;div class='noticeHead' align=&quot;left&quot;&gt;&lt;b&gt;Employee Speak&lt;/b&gt;&lt;/div&gt;--&gt;
+                                                                    &lt;p class=&quot;lbltxt&quot;&gt; 28 July 2010, I can never forget this date. The day when I entered in a different phase of life i.e. Professional World. So, I'll be completing 5 years in this organization which gives me a sense of belonging to QA Info Tech. I never thought that this journey would be so exciting and challenging. Each and every day was a different learning experience here. Senior Management, colleagues, everyone is so helpful and nice. I feel like I am totally a different person now. I entered this organization, as a young nervous boy and I am a Young Confident Man today. I've got a lot of exposure here that had helped me to enhance my knowledge and intellect. The best part of the organization is that there are enormous opportunities and management will always help you to grab them and work on  them. They will always be there to provide their continuous support and will always show interest in helping you to learn and do the task in a better way. As it is said that,&quot; All time Work and No Play... Makes Jack a dull Boy&quot;. So, our Organization takes care of this aspect also. Fun events are there on regular basis that keeps us fresh and refreshes our mind. It's always like a second home to me. There were lots of ups and downs but we stood as a team and faced it and we have always seen it growing better and better and so was our personal front. So far, it has been a wonderful and awesome time here and still my journey is on... Lots of new learning, lot of new exposures, lot of new projects are yet to come. Each day I enter my office to do something new or if not new than do the regular job in a new way which keeps my mind innovative. And more stories are yet to come. As i said, &quot;THE JOURNEY IS STILL ON&quot;...&lt;/p&gt;  
+                                                        &lt;/div&gt;&lt;div id=&quot;scrollerSpeak&quot; class=&quot;simply-scroll-list&quot; style=&quot;height: 1404px;&quot;&gt;
+                                                                                                                                                                                &lt;!--&lt;div class='noticeHead' align=&quot;left&quot;&gt;&lt;b&gt;Employee Speak&lt;/b&gt;&lt;/div&gt;--&gt;
+                                                                    &lt;p class=&quot;lbltxt&quot;&gt; Good company to work for. I express my gratitude to Mukesh for hiring me and giving me a change to excel.&lt;/p&gt;                                                                                                                    &lt;!--&lt;div class='noticeHead' align=&quot;left&quot;&gt;&lt;b&gt;Employee Speak&lt;/b&gt;&lt;/div&gt;--&gt;
+                                                                    &lt;p class=&quot;lbltxt&quot;&gt; 28 July 2010, I can never forget this date. The day when I entered in a different phase of life i.e. Professional World. So, I'll be completing 5 years in this organization which gives me a sense of belonging to QA Info Tech. I never thought that this journey would be so exciting and challenging. Each and every day was a different learning experience here. Senior Management, colleagues, everyone is so helpful and nice. I feel like I am totally a different person now. I entered this organization, as a young nervous boy and I am a Young Confident Man today. I've got a lot of exposure here that had helped me to enhance my knowledge and intellect. The best part of the organization is that there are enormous opportunities and management will always help you to grab them and work on  them. They will always be there to provide their continuous support and will always show interest in helping you to learn and do the task in a better way. As it is said that,&quot; All time Work and No Play... Makes Jack a dull Boy&quot;. So, our Organization takes care of this aspect also. Fun events are there on regular basis that keeps us fresh and refreshes our mind. It's always like a second home to me. There were lots of ups and downs but we stood as a team and faced it and we have always seen it growing better and better and so was our personal front. So far, it has been a wonderful and awesome time here and still my journey is on... Lots of new learning, lot of new exposures, lot of new projects are yet to come. Each day I enter my office to do something new or if not new than do the regular job in a new way which keeps my mind innovative. And more stories are yet to come. As i said, &quot;THE JOURNEY IS STILL ON&quot;...&lt;/p&gt;  
+                                                        &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;hr /&gt;
+                                            &lt;div class=&quot;row-fluid&quot;&gt; &lt;!-- Event Calendar is commented as of now --&gt;
+                                                &lt;!--&lt;div class=&quot;span12&quot;&gt;
+                                                    &lt;div class=&quot;eventcontainer&quot;&gt;
+                                                        &lt;div class=&quot;monthdetails&quot;&gt; 
+                                                            &lt;div class=&quot;span2&quot;&gt;&lt;i class=&quot;icon-angle-left&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                                                            &lt;div class=&quot;span8 text-center monthname&quot;&gt; january 2016 &lt;/div&gt;
+                                                            &lt;div class=&quot;span2 text-right&quot;&gt;&lt;i class=&quot;icon-angle-right&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                                    
+                                    
+                                                        &lt;/div&gt;
+                                                        &lt;div class=&quot;event-details&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;time-details span3&quot;&gt;15:30&lt;/div&gt;
+                                                                &lt;div class=&quot;event-text span8&quot;&gt; My Event &lt;/div&gt;
+                                    
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;time-details span3&quot;&gt;15:30&lt;/div&gt;
+                                                                &lt;div class=&quot;event-text span8&quot;&gt; My Event &lt;/div&gt;
+                                    
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;time-details span3&quot;&gt;15:30&lt;/div&gt;
+                                                                &lt;div class=&quot;event-text span8&quot;&gt; My Event &lt;/div&gt;
+                                    
+                                                            &lt;/div&gt;
+                                    
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;--&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt; &lt;!-- End of TAB LOGIN --&gt;
+                                        &lt;div class=&quot;tab-pane hrisuse-container&quot; id=&quot;panel2&quot;&gt; &lt;!-- Start of about HRIS tab --&gt;
+                                            &lt;div class=&quot;row-fluid&quot;&gt;
+                                                &lt;div class=&quot;span6&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-user&quot;&gt;&lt;/i&gt;&nbsp;&nbsp; Use HRIS to ...&lt;/h4&gt;
+                                                    &lt;div class=&quot;box li-spacing&quot;&gt;
+                                                        &lt;p&gt;&lt;b&gt; Use HRIS to ... &lt;/b&gt;&lt;/p&gt;
+                                                        &lt;ul&gt;
+                                                            &lt;li&gt;Keep track of Holidays and Leaves&lt;/li&gt;
+                                                            &lt;li&gt;Keep track of the hours you spend in office&lt;/li&gt;
+                                                            &lt;li&gt;Keep us updated of all your details&lt;/li&gt;
+                                                            &lt;li&gt;Manage your subordinates&lt;/li&gt;
+                                                            &lt;li&gt;Track your career growth at QAIT&lt;/li&gt;
+
+                                                        &lt;/ul&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;span6&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-question&quot;&gt;&lt;/i&gt;&nbsp;&nbsp;HRIS Updates&lt;/h4&gt;
+                                                    &lt;div class=&quot;box li-spacing&quot;&gt;
+                                                        &lt;p&gt;&lt;b&gt; HRIS Updates&lt;/b&gt;&lt;/p&gt;
+                                                        &lt;ul&gt;
+                                                                                                                                &lt;li&gt;&lt;a href=&quot;archives.php#tabs-2&quot; style=&quot;text-decoration: none;&quot;&gt;HRIS Release-v2.7.5631-January 12, 2018&lt;/a&gt;&lt;img src=&quot;themes/beyondT/pictures/New_icons_44.gif&quot; /&gt;&lt;/li&gt;
+                                                                                                                                        &lt;li&gt;HRIS Release-v2.7.5577-December 22, 2017&lt;/li&gt;
+                                                                                                                                        &lt;li&gt;HRIS Release-v2.7.5554-December 15, 2017&lt;/li&gt;
+                                                                                                                                        &lt;li&gt;HRIS Release-v2.7.5526-December 08, 2017&lt;/li&gt;
+                                                                                                                                        &lt;li&gt;HRIS Release-v2.7.5510-December 01, 2017&lt;/li&gt;
+                                                                                                                            &lt;/ul&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;&lt;!-- ABOUT HRIS --&gt;
+
+                                        &lt;div class=&quot;tab-pane Celebration-container&quot; id=&quot;panel3&quot;&gt;
+                                            &lt;div class=&quot;row-fluid&quot;&gt;
+                                                &lt;div class=&quot;span4&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;&nbsp;&nbsp;Birthday(s)&lt;/h4&gt;
+                                                    &lt;div class=&quot;celebrations-container clearfix&quot;&gt;
+                                                                                                                        &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=193&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Satendra  Singh&lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                                                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;span4&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-shield&quot;&gt;&lt;/i&gt;&nbsp;&nbsp;JobAnniversary(s)&lt;/h4&gt;
+                                                    &lt;div class=&quot;celebrations-container clearfix&quot;&gt;
+                                                        &lt;!-- JOB Anniversarry --&gt;
+                                                                                                                        &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=396&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;&lt;b&gt;Rajini Anantha Padmanaban&lt;/b&gt; completes 8 years with QAIT today&lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=02381&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;&lt;b&gt;Rohan  Sharma&lt;/b&gt; completes 2 years with QAIT today&lt;/div&gt;
+                                                                &lt;/div&gt;
+                                                                                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;span4&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;&nbsp;&nbsp;New joinee(s)&lt;/h4&gt;
+                                                    &lt;div class=&quot;celebrations-container clearfix&quot;&gt;
+                                                                                                                        &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=3340&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Sanchit  Saxena&lt;/div&gt;									
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=3341&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Kartar  Singh&lt;/div&gt;									
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=3342&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Somesh  Kumar&lt;/div&gt;									
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=3343&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Komal  Jasrotia&lt;/div&gt;									
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=3344&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Pradeep  Kumar&lt;/div&gt;									
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=3345&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Priyanka  Bhargava&lt;/div&gt;									
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=3346&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Anupam  Kumaria&lt;/div&gt;									
+                                                                &lt;/div&gt;
+                                                                                                                                &lt;div class=&quot;emp-cel span12&quot;&gt;
+                                                                    &lt;div class=&quot;emp-img span3&quot;&gt;&lt;img src=&quot;templates/hrfunct/photohandler.php?id=3347&amp;amp;action=VIEW&amp;amp;subAction=VIEWONLY&quot; /&gt;&lt;/div&gt;
+                                                                    &lt;div class=&quot;emp-msg span9&quot;&gt;Shamiulla  Koguru&lt;/div&gt;									
+                                                                &lt;/div&gt;
+                                                                                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+
+                                        &lt;/div&gt; &lt;!-- END of CELEBRATION--&gt;
+                                        &lt;div id=&quot;panel4&quot; class=&quot;tab-pane qaitupdates-container &quot;&gt;
+                                            &lt;div class=&quot;row-fluid&quot;&gt;
+                                                &lt;div class=&quot;span12&quot;&gt; 
+                                                    &lt;div align=&quot;center&quot; style=&quot;&quot;&gt;
+                    
+&lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;&lt;!-- QAIT UPDATE --&gt;
+                                        &lt;div id=&quot;panel5&quot; class=&quot;tab-pane hris-policy&quot;&gt;
+                                            &lt;div class=&quot;row-fluid&quot;&gt;
+                                                &lt;div class=&quot;span12&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-info-sign&quot;&gt;&lt;/i&gt;&nbsp;&nbsp;HR Policy&lt;/h4&gt;                                  
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            &lt;div class=&quot;row-fluid&quot; id=&quot;policy-container&quot;&gt; &lt;!-- HR Document --&gt;
+                                                                                                        &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-primary&quot;&gt;Work Time Policy 2018&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Work Time Policy 2018&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2018-01-18&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-success&quot;&gt;Employee Benefits &amp;amp; Reimbursements Policy 2018&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Employee Benefits &amp;amp; Reimbursements Policy 2018&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2018-01-17&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-info&quot;&gt;List of Holidays (India Operations) for the year 2018&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;List of Holidays (India Operations) for the year 2018&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2017-11-30&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-warning&quot;&gt;Leave Policy 2017&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Leave Policy 2017&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2017-09-20&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-danger&quot;&gt;Service Transition Document Template&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Service Transition Document Template&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2017-09-06&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-success&quot;&gt;Ascent Employee Self Service Portal- User Manual&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Ascent Employee Self Service Portal-
+ User Manual&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2017-09-01&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-info&quot;&gt;Business Visa Reimbursement/ Per Diem Policy- effective September 01, 2017&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Business Visa Reimbursement/ Per Diem Policy- effective September 01, 2017&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2017-08-11&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-warning&quot;&gt;Team Data (May 2017- July 2017)&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Team Data (May 2017- July 2017)&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2017-07-24&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-danger&quot;&gt;Group Medical Insurance Policy- 2017&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Group Medical Insurance Policy Document- 2017&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2017-07-13&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-success&quot;&gt;B1/Business Visa Reimbursement/ Per Diem Policy- 2017&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;B1/Business Visa Reimbursement/ Per Diem Policy- 2017&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2017-07-10&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-info&quot;&gt;Performance Improvement Plan&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Performance Improvement Plan&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2016-12-07&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-warning&quot;&gt;List of Holidays- 2017&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;List of Holidays, Restricted Holidays and tentative schedule for Working Saturdays for the year 2017 (applicable for India Employees only)&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2016-11-28&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-danger&quot;&gt;IT Policy&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;IT Policy&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2016-11-16&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-success&quot;&gt;IT Service Catalogue&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;IT Service Catalogue&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2016-11-16&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-info&quot;&gt;IT Induction&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;IT Induction Presentation&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2016-11-16&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-warning&quot;&gt;Sexual Harassment Policy&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Sexual Harassment Policy&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2016-07-22&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-danger&quot;&gt;Resource Management System Manual Document&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Resource Management System Document&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2015-12-08&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-success&quot;&gt;Grievance Redressal Policy 2015&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;Defining the Grievance Handling Procedure: w.e.f November 13, 2015&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2015-11-13&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-info&quot;&gt;Earthquake Safety Tips&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;The document outlines the safety measures to be taken in case of an earthquake.&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2013-12-26&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-warning&quot;&gt;Fire Safety Tips&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;The document outlines the safety measures to be taken in case of a fire alarm.&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2013-12-26&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-danger&quot;&gt;How to operate fire extinguisher&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;The document outlines the process to operate a fire extinguisher.&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2013-12-26&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-success&quot;&gt;Non_Discrimination_Policy&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;This policy aims to create a healthy working environment that enables employees to work without any discrimination.&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2013-08-02&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                                                                                &lt;div class=&quot;row-fluid marginTop15&quot;&gt;
+                                                            &lt;div class=&quot;span4&quot;&gt;
+                                                                &lt;div class=&quot;bg-info&quot;&gt;Disciplinary_Action_Policy&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;span8&quot; id=&quot;leave-policy&quot;&gt; 
+                                                                &lt;div class=&quot;span9 policy-details&quot;&gt;This policy provides information about Disciplinary Action Policy of QA InfoTech.&lt;/div&gt;
+                                                                &lt;div class=&quot;span3 policy-date text-right&quot;&gt;Updated on 2013-08-02&lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                            
+                                            &lt;/div&gt;
+
+                                        &lt;/div&gt; &lt;!-- HR Policy --&gt;
+                                                                                &lt;div id=&quot;panel7&quot; class=&quot;tab-pane Reminder-container&quot;&gt;
+                                            &lt;div class=&quot;row-fluid&quot;&gt;
+                                                &lt;div class=&quot;span12&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-food&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&nbsp;&nbsp; Food Menu&lt;/h4&gt;
+                                                    &lt;table id=&quot;invoiceTable&quot; class=&quot;table table-striped childTR&quot;&gt;
+                                                        &lt;thead&gt;
+                                                            &lt;tr&gt; 
+                                                                &lt;th&gt;DATE&lt;/th&gt;
+                                                                &lt;th&gt;BREAKFAST&lt;/th&gt; 
+                                                                &lt;th&gt;LUNCH&lt;/th&gt; 
+                                                                &lt;th&gt;SNACKS&lt;/th&gt; 
+                                                                &lt;th&gt;DINNER&lt;/th&gt;
+                                                                &lt;th&gt;SPECIAL FOOD&lt;/th&gt; 
+                                                            &lt;/tr&gt;
+                                                        &lt;/thead&gt;
+                                                        &lt;tbody&gt;
+                                                                                                                                    &lt;tr&gt;&lt;td width=&quot;75px&quot;&gt;18-01-2018&lt;/td&gt;
+                                                                                                                                                &lt;td&gt;Tea, Mix parantha&lt;/td&gt;
+                                                                                                                                                                                                                                &lt;td&gt;Jeera rice, Kadhi pakora, Tawa Roti, Salad, Aloo jeera&lt;/td&gt;
+                                                                                                                                                                                                                                &lt;td&gt;Tea, Paneer kulcha&lt;/td&gt;
+                                                                                                                                                                                                                                &lt;td&gt;N/A&lt;/td&gt;
+                                                                                                                                                                                                                                &lt;td&gt;N/A&lt;/td&gt;
+                                                                                                                                                                                                                        &lt;/tr&gt;
+                                                                                                                                            &lt;tr&gt;&lt;td width=&quot;75px&quot;&gt;19-01-2018&lt;/td&gt;
+                                                                                                                                                &lt;td&gt;Bedmi puri with sabji, Tea&lt;/td&gt;
+                                                                                                                                                                                                                                &lt;td&gt;Jeera rice, Mix veg, Rajma, Tawa Roti, Raita, Salad&lt;/td&gt;
+                                                                                                                                                                                                                                &lt;td&gt;Tea, Vada pav&lt;/td&gt;
+                                                                                                                                                                                                                                &lt;td&gt;N/A&lt;/td&gt;
+                                                                                                                                                                                                                                &lt;td&gt;N/A&lt;/td&gt;
+                                                                                                                                                                                                                        &lt;/tr&gt;
+                                                                                                                                
+                                                        &lt;/tbody&gt;
+                                                    &lt;/table&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;&lt;!-- Food Menu --&gt;
+                                                                                &lt;div id=&quot;panel6&quot; class=&quot;tab-pane Reminder-container&quot;&gt;
+                                            &lt;div class=&quot;row-fluid&quot;&gt;
+                                                &lt;div class=&quot;span12&quot;&gt;
+                                                    &lt;h4 class=&quot;tab-heading&quot;&gt;&lt;i class=&quot;icon-question-sign&quot;&gt;&lt;/i&gt;&nbsp;&nbsp; Did you know?&lt;/h4&gt;
+                                                    &lt;!--     &lt;div class=&quot;span11 text-center&quot;&gt; 
+                                                             &lt;img src=&quot;themes/beyondT/images/bg.jpg&quot; alt=&quot;did you know&quot;&gt;
+                                                         &lt;/div&gt;   --&gt;
+                                                    &lt;header id=&quot;myCarousel&quot; class=&quot;carousel slide&quot;&gt;
+                                                        &lt;!-- Indicators --&gt;
+                                                        &lt;ol class=&quot;carousel-indicators&quot;&gt;
+                                                            &lt;li data-target=&quot;#myCarousel&quot; data-slide-to=&quot;0&quot; class=&quot;active&quot;&gt;&lt;/li&gt;
+                                                            &lt;li data-target=&quot;#myCarousel&quot; data-slide-to=&quot;1&quot;&gt;&lt;/li&gt;
+                                                            &lt;li data-target=&quot;#myCarousel&quot; data-slide-to=&quot;2&quot;&gt;&lt;/li&gt;
+                                                        &lt;/ol&gt;
+
+                                                        &lt;!-- Wrapper for Slides --&gt;
+                                                        &lt;div class=&quot;carousel-inner&quot;&gt;
+                                                            &lt;div class=&quot;item active&quot;&gt;
+                                                                &lt;!-- Set the first background image using inline CSS below. --&gt;
+                                                                &lt;div class=&quot;fill&quot; style=&quot;background-image:url('themes/beyondT/images/bg.jpg');&quot;&gt;&lt;/div&gt;
+                                                                &lt;div class=&quot;carousel-caption&quot;&gt;
+                                                                    &lt;h5&gt;Caption 1&lt;/h5&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;item&quot;&gt;
+                                                                &lt;!-- Set the second background image using inline CSS below. --&gt;
+                                                                &lt;div class=&quot;fill&quot; style=&quot;background-image:url('themes/beyondT/images/bg.jpg');&quot;&gt;&lt;/div&gt;
+                                                                &lt;div class=&quot;carousel-caption&quot;&gt;
+                                                                    &lt;h5&gt;Caption 2&lt;/h5&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;div class=&quot;item&quot;&gt;
+                                                                &lt;!-- Set the third background image using inline CSS below. --&gt;
+                                                                &lt;div class=&quot;fill&quot; style=&quot;background-image:url('themes/beyondT/images/bg.jpg');&quot;&gt;&lt;/div&gt;
+                                                                &lt;div class=&quot;carousel-caption&quot;&gt;
+                                                                    &lt;h5&gt;Caption 3&lt;/h5&gt;
+                                                                &lt;/div&gt;
+                                                            &lt;/div&gt;
+                                                        &lt;/div&gt;
+
+                                                        &lt;!-- Controls --&gt;
+                                                        &lt;a class=&quot;left carousel-control&quot; href=&quot;#myCarousel&quot; data-slide=&quot;prev&quot;&gt;
+                                                            &lt;i class=&quot;icon-angle-left&quot;&gt;&lt;/i&gt;
+                                                        &lt;/a&gt;
+                                                        &lt;a class=&quot;right carousel-control&quot; href=&quot;#myCarousel&quot; data-slide=&quot;next&quot;&gt;
+                                                            &lt;i class=&quot;icon-angle-right&quot;&gt;&lt;/i&gt;
+                                                        &lt;/a&gt;
+
+                                                    &lt;/header&gt;
+                                                    &lt;div class=&quot;span11&quot;&gt;
+                                                                                                                                                                                    &lt;p&gt; &lt;b&gt;HR Updates&lt;/b&gt; &lt;/p&gt;
+                                                                &lt;p&gt;Job Openings for Java Developer, Dotnet Developers, Automation Engineer, BDE, Inside Sales, SOC Executive, SMEs. For more information, please visit : HRIS &amp;gt; Current Openings.&lt;/p&gt;
+                                                                                                                                &lt;p&gt; &lt;b&gt;Admin Updates:&lt;/b&gt; &lt;/p&gt;
+                                                                &lt;p&gt;New photos of QA InfoTech A-8 Office uploaded in HRIS. To view images, please visit: Home &amp;gt; Photo Album.&lt;/p&gt;
+                                                                                                                                &lt;p&gt; &lt;b&gt;Emergency Contact Numbers&lt;/b&gt; &lt;/p&gt;
+                                                                &lt;p&gt;Important Contact Numbers of Cops in Noida. For more information, please visit: Home &amp;gt; HR Documents.&lt;/p&gt;
+                                                                                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+
+                                        &lt;/div&gt;&lt;!-- Do you know tab --&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;		
+                    &lt;/div&gt;
+                    &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+                    &lt;footer&gt;
+                        &lt;div class=&quot;container&quot;&gt;
+                            &lt;div class=&quot;span10 offset1 text-center&quot;&gt;
+                                &lt;ul class=&quot;bs-docs-footer-links&quot;&gt;  &lt;li&gt;&lt;a href=&quot;http://10.0.1.94/myascentpayroll/&quot; target=&quot;_blank&quot;&gt;Access Payroll Online&lt;/a&gt;&lt;/li&gt;   &lt;li&gt;&lt;a href=&quot;http://bugzilla.qainfotech.com:8080/bugzilla/&quot; target=&quot;_blank&quot;&gt;Report a Bug&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;
+
+                            &lt;/div&gt;
+                            &lt;div class=&quot;span10 offset1 text-center&quot;&gt;
+                                &lt;p class=&quot;copyright&quot;&gt; QAITHRIS Copyright QA InfoTech Pvt. Ltd. 2018 rights reserved.&lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;&lt;/footer&gt;
+
+                    &lt;script src=&quot;scripts/js/loginJs/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+                    &lt;script src=&quot;scripts/js/loginJs/tabs-addon.js&quot;&gt;&lt;/script&gt;
+                    &lt;script type=&quot;text/javascript&quot; src=&quot;scripts/js/jquery.simplyscroll.min.js&quot;&gt;&lt;/script&gt;
+                    &lt;script&gt;
+                                                                $('.carousel').carousel({
+                                                                    interval: 5000 //changes the speed
+                                                                })
+                    &lt;/script&gt;
+
+                    &lt;script&gt;
+                        $(function ()
+                        {
+
+                        });
+
+                    &lt;/script&gt;
+                    &lt;script&gt;
+                        function validateForm() {
+                            var txtUserObj = jQuery('#txtUserName');
+                            var txtPassObj = jQuery('#txtPassword');
+                            if (txtUserObj.val() == '') {
+                                txtUserObj.css('border', '1px solid red');
+                                txtUserObj.css('box-shadow', 'inset 0 1px 1px red,0 0 4px red');
+                                return false;
+                            }
+
+                            if (txtPassObj.val() == '') {
+                                txtUserObj.css('border', '1px solid #8DC506');
+                                txtPassObj.css('border', '1px solid red');
+                                return false;
+                            }
+
+                            document.loginForm.actionID.value = &quot;chkAuthentication&quot;;
+                            document.loginForm.submit();
+                        }
+                        window.onload = function () {
+                            winResize();
+                        };
+                        window.onresize = function () {
+                            winResize();
+                        };
+                        function winResize() {
+                            if ($('body .container').height() &amp;lt; $(window).height()) {
+                                $('.container.footerPos').css('position', 'fixed');
+                            } else {
+                                $('.container.footerPos').css('position', 'static');
+                            }
+                            setTimeout(function () {
+                                winResize();
+                            }, 10);
+                        }
+                        $(document).ready(function () {
+                            jQuery(&quot;#scroller,#scrollerSpeak,#scrollerNotice&quot;).simplyScroll({
+                                direction: 'forwards',
+                                pauseOnHover: true,
+                                frameRate: 20,
+                                orientation: 'vertical',
+                                speed: 1,
+                                autoMode: 'loop',
+                                customClass: 'vert'
+
+                            });
+                            $(&quot;.pausePlayer&quot;).click(function () {
+                                setTimeout(function () {
+                                    $(&quot;#txtUserName&quot;).focus();
+                                }, 10);
+                            });
+                        });
+                        if (window.parent != window) {
+                            //window.parent.location = &quot;localhost:8086/user/logoff&quot;;
+                            window.top.location.href = &quot;&quot;;
+                            window.top.location.href = &quot;&quot;;
+                        }
+
+                        if ($('.emp-login-scroll').height() &amp;gt; 320) {
+                            jQuery(&quot;#empscroll&quot;).simplyScroll({
+                                direction: 'forwards',
+                                pauseOnHover: true,
+                                frameRate: 20,
+                                orientation: 'vertical',
+                                speed: 1,
+                                autoMode: 'loop',
+                                customClass: 'vert'
+
+                            });
+                        }
+
+                    &lt;/script&gt;
+                    &lt;script&gt;
+                        function nextMsg(i) {
+                            $('#hrismsg').html(messages[i]).fadeIn(500).delay(5000).fadeOut(500, function () {
+                                nextMsg(++i % messages.length);
+                            });
+                        }
+                        ;
+                        var messages = [];
+                                //messages.push(&quot;For all the current openings in QA InfoTech, please view Current Openings in HRIS. HRIS -&amp;gt; Current Openings&quot;);                                 
+                                $('#message').hide();
+                        //nextMsg(0);
+                    &lt;/script&gt;
+
+                
+                &lt;/body&gt;&lt;/html&gt;</pre>
+			</div>
+			<div class="tab-pane" id='interactions'>
+				<h2>Interactions</h2>
+				<table class="table table-bordered table-striped">
+					<tbody>
+						<tr>
+							<th>Xpath</th>
+							<th>Destination</tg>
+						</tr>
+												<tr>
+							<td>/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/FORM[1]/DIV[2]/DIV[1]/INPUT[1]</td>
+							<td><a href="state1.html">state1</a></td>
+						</tr>
+											</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../lib/shCore.js"></script>
+	<script type="text/javascript" src="../lib/shBrushXml.js"></script>
+	<script type="text/javascript" src="../lib/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../lib/bootstrap.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function() {
+			SyntaxHighlighter.all()
+
+			$('#tabs a').click(function (e) {
+		  		e.preventDefault();
+		  		$(this).tab('show');
+			})
+		});
+    	
+    	$('.hovers').tooltip({
+    	    placement: function(a, element) {
+    	        var position = $(element).position();
+    	        if (position.left > 515) {
+    	            return "left";
+    	        }
+    	        if (position.left < 515) {
+    	            return "right";
+    	        }
+    	        if (position.top < 110){
+    	            return "bottom";
+    	        }
+    	        return "top";
+    	    }
+    	});
+	</script>
+</body>
+</html>
